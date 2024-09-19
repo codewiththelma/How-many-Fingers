@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background: linear-gradient(45deg, #4d0e5d, rgb(253, 97, 190));
+    }
+    h2{
+        margin: 0;
+    }
+</style>
+<body>
+    <h2>Guessing Game</h2>
+    <p>How many Fingers am I holding up</p>
+    <div><select name="" id="inputText" >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select> 
+    <button id="btn"> Guess</button></div>
+    <script>
+        document.getElementById("btn").onclick= function(){
+            var rand = Math.floor((Math.random()*4)+1);
+            var inputText = document.getElementById("inputText").value;
+            if (inputText==rand){
+                alert("Correct")
+            }
+            else{
+                alert("Wrong, Try again, The number was " + rand)
+            }
+
+        }
+       
+       
+
+    </script>
+</body>
+</html>
